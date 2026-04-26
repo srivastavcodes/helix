@@ -1,0 +1,43 @@
+theme = "sonokai_custom"
+
+# =================================================EDITOR CONFIGS===================================================
+[editor]
+line-number = "relative"
+cursorline = true
+clipboard-provider = "pasteboard"
+
+[editor.lsp]
+auto-signature-help = false
+display-inlay-hints = true
+display-progress-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+character = "|"
+skip-levels = 1
+
+# =================================================KEYMAP CONFIGS===================================================
+[keys.normal]
+C-S-g = ":sh wezterm cli split-pane -- lazygit"
+C-S-o = ":open ~/.config/helix/config.toml"
+C-j = "move_line_down"
+C-k = "move_line_up"
+
+[keys.select]
+C-j = "move_line_down"
+C-k = "move_line_up"
+
+[keys.insert]
+C-j = "move_line_down"
+C-k = "move_line_up"
+
+[keys.insert.k]
+j = "normal_mode"
