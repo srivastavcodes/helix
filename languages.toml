@@ -21,13 +21,13 @@ diagnostics.experimental.enable = false # too noisy for daily use
 # -- Check (replaces cargo check on save) ------------------------------------------------------------------------
 check.command = "clippy" # use clippy instead of plain check
 check.extraArgs = [
-    "--",
-    "-W",
-    "clippy::pedantic",
-    "-A",
-    "clippy::must_use_candidate", # too noisy
-    "-A",
-    "clippy::missing_errors_doc", # too noisy
+  "--",
+  "-W",
+  "clippy::pedantic",
+  "-A",
+  "clippy::must_use_candidate", # too noisy
+  "-A",
+  "clippy::missing_errors_doc", # too noisy
 ]
 
 # -- Inlay hints -------------------------------------------------------------------------------------------------
@@ -76,11 +76,11 @@ rangeVariableTypes = true
 
 [language-server.golangci-lint-lsp.config]
 command = [
-    "golangci-lint",
-    "run",
-    "--output.json.path=stdout",
-    "--show-stats=false",
-    "--issues-exit-code=1",
+  "golangci-lint",
+  "run",
+  "--output.json.path=stdout",
+  "--show-stats=false",
+  "--issues-exit-code=1",
 ]
 
 [language-server.golangci-lint-lsp]
@@ -103,8 +103,9 @@ formatter.enabled = true
 [[language]]
 name = "toml"
 auto-format = true
-language-servers = ["taplo"]              # drop tombi (taplo is more mature for Cargo)
-indent = { tab-width = 4, unit = "    " } # Cargo.toml convention
+language-servers = ["taplo"]                           # drop tombi (taplo is more mature for Cargo)
+indent = { tab-width = 4, unit = "    " }              # Cargo.toml convention
+formatter = { command = "taplo", args = ["fmt", "-"] }
 
 # ================================================================================================================
 #  JSON  (api responses, configs, .vscode/settings.json)
@@ -131,7 +132,7 @@ language-servers = ["yaml-language-server"]
 [[language]]
 name = "markdown"
 language-servers = [
-    "marksman",
+  "marksman",
 ] # drop markdown-oxide and rumdl, overkill for Rust docs
 soft-wrap.enable = true # wrap long lines in docs
 
