@@ -58,6 +58,37 @@ auto-format = true
 formatter = { command = "rustfmt" }
 language-servers = ["rust-analyzer"]
 
+
+# ================================================================================================================
+#  GO
+# ================================================================================================================
+
+[language-server.gopls.config.hints]
+assignVariableTypes = true
+compositeLiteralFields = true
+constantValues = true
+functionTypeParameters = true
+parameterNames = true
+rangeVariableTypes = true
+
+[language-server.golangci-lint-lsp.config]
+command = [
+    "golangci-lint",
+    "run",
+    "--output.json.path=stdout",
+    "--show-stats=false",
+    "--issues-exit-code=1",
+]
+
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
+
+[[language]]
+name = "go"
+auto-format = true
+formatter = { command = "gofmt" }
+language-servers = ["gopls", "golangci-lint-lsp"]
+
 # ================================================================================================================
 #  TOML  (Cargo.toml, rust-toolchain.toml, config.toml etc.)
 #  taplo = full-featured TOML LSP with schema support for Cargo.toml
