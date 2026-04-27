@@ -30,6 +30,8 @@ C-g = ":sh wezterm cli split-pane -- lazygit"
 C-o = ":open ~/.config/helix/config.toml"
 C-j = "move_line_down"
 C-k = "move_line_up"
+"{" = "goto_prev_paragraph"
+"}" = "goto_next_paragraph"
 
 [keys.select]
 C-j = "move_line_down"
