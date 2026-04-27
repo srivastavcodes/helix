@@ -1,24 +1,24 @@
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 #  RUST
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 
 [language-server.rust-analyzer.config]
 
-# ── Cargo ─────────────────────────────────────────────────────────────────────
+# -- Cargo -------------------------------------------------------------------------------------------------------
 cargo.buildScripts.enable = true # needed for proc-macros and build.rs
 cargo.features = "all"           # index all features upfront
 cargo.allTargets = true          # include tests/benches in analysis
 
-# ── Proc macros ───────────────────────────────────────────────────────────────
+# -- Proc macros -------------------------------------------------------------------------------------------------
 procMacro.enable = true
 procMacro.attributes.enable = true
 
-# ── Diagnostics ───────────────────────────────────────────────────────────────
+# -- Diagnostics -------------------------------------------------------------------------------------------------
 diagnostics.enable = true
 diagnostics.styleLints.enable = true    # clippy-style lint hints
 diagnostics.experimental.enable = false # too noisy for daily use
 
-# ── Check (replaces cargo check on save) ──────────────────────────────────────
+# -- Check (replaces cargo check on save) ------------------------------------------------------------------------
 # check.command    = "clippy"               # use clippy instead of plain check
 # check.extraArgs  = [
 #     "--",
@@ -27,7 +27,7 @@ diagnostics.experimental.enable = false # too noisy for daily use
 #     "-A", "clippy::missing_errors_doc",   # too noisy
 # ]
 
-# ── Inlay hints ───────────────────────────────────────────────────────────────
+# -- Inlay hints -------------------------------------------------------------------------------------------------
 inlayHints.typeHints.enable = true
 inlayHints.typeHints.hideClosureInitialization = false
 inlayHints.chainingHints.enable = true
@@ -39,17 +39,17 @@ inlayHints.closingBraceHints.enable = true
 inlayHints.closingBraceHints.minLines = 15
 inlayHints.bindingModeHints.enable = false               # noisy, keep off
 
-# ── Completion ────────────────────────────────────────────────────────────────
+# -- Completion --------------------------------------------------------------------------------------------------
 completion.autoimport.enable = true
 completion.callable.enable = "fill_arguments"
 completion.postfix.enable = true                # .if / .match / .unwrap completions
 completion.fullFunctionSignatures.enable = true
 
-# ── Imports ───────────────────────────────────────────────────────────────────
+# -- Imports -----------------------------------------------------------------------------------------------------
 imports.granularity.group = "module" # group imports by module
 imports.prefix = "self"              # prefer self:: over crate::
 
-# ── Files ─────────────────────────────────────────────────────────────────────
+# -- Files -------------------------------------------------------------------------------------------------------
 files.excludeDirs = ["target", ".git", "node_modules"]
 
 [[language]]
@@ -58,10 +58,10 @@ auto-format = true
 formatter = { command = "rustfmt" }
 language-servers = ["rust-analyzer"]
 
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 #  TOML  (Cargo.toml, rust-toolchain.toml, config.toml etc.)
 #  taplo = full-featured TOML LSP with schema support for Cargo.toml
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 
 [language-server.taplo.config]
 formatter.enabled = true
@@ -72,29 +72,27 @@ auto-format = true
 language-servers = ["taplo"]              # drop tombi (taplo is more mature for Cargo)
 indent = { tab-width = 4, unit = "    " } # Cargo.toml convention
 
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 #  JSON  (api responses, configs, .vscode/settings.json)
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 
 [[language]]
 name = "json"
 auto-format = true
 indent = { tab-width = 4, unit = "    " }
 
-
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 #  YAML  (CI pipelines — GitHub Actions, Docker Compose, k8s manifests)
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 
 [[language]]
 name = "yaml"
 auto-format = false                         # yamlfmt can be destructive, keep manual
 language-servers = ["yaml-language-server"]
 
-
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 #  MARKDOWN  (README, docs, rustdoc examples)
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 
 [[language]]
 name = "markdown"
@@ -103,10 +101,9 @@ language-servers = [
 ] # drop markdown-oxide and rumdl, overkill for Rust docs
 soft-wrap.enable = true # wrap long lines in docs
 
-
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 #  BASH  (.env scripts, Makefiles, CI shell scripts)
-# ══════════════════════════════════════════════════════════════════════════════
+# ================================================================================================================
 
 [[language]]
 name = "bash"
