@@ -5,6 +5,11 @@ theme = "sonokai_custom"
 line-number = "relative"
 cursorline = true
 clipboard-provider = "pasteboard"
+scrolloff = 10
+completion-trigger-len = 1
+completion-replace = true
+bufferline = "multiple"
+popup-border = "all"
 
 [editor.lsp]
 auto-signature-help = false
@@ -23,6 +28,29 @@ hidden = false
 render = true
 character = "|"
 skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+other-lines = "warning"
+
+[editor.statusline]
+left = ["mode", "file-name", "file-modification-indicator"]
+right = [
+    "spinner",
+    "diagnostics",
+    "selections",
+    "version-control",
+    "position",
+    "file-encoding",
+    "file-line-ending",
+    "file-type",
+]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+diagnostics = ["warning", "error"]
+workspace-diagnostics = ["warning", "error"]
 
 # =================================================KEYMAP CONFIGS===================================================
 [keys.normal]
