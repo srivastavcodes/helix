@@ -39,8 +39,8 @@ inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.lifetimeElisionHints.useParameterNames = true
 inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.closingBraceHints.enable = true
-inlayHints.closingBraceHints.minLines = 15
 inlayHints.bindingModeHints.enable = false               # noisy, keep off
+inlayHints.closingBraceHints.minLines = 15
 
 # -- Completion --------------------------------------------------------------------------------------------------
 completion.autoimport.enable = true
