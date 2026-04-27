@@ -58,7 +58,7 @@ workspace-diagnostics = ["warning", "error"]
 
 # =================================================KEYMAP CONFIGS===================================================
 [keys.normal]
-C-g = ":sh wezterm cli split-pane -- lazygit"
+C-l = ":sh wezterm cli split-pane --percent 70 -- lazygit > /dev/null 2>&1"
 C-o = ":open ~/.config/helix/config.toml"
 C-j = "move_line_down"
 C-k = "move_line_up"
