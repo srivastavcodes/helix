@@ -26,8 +26,8 @@ skip-levels = 1
 
 # =================================================KEYMAP CONFIGS===================================================
 [keys.normal]
-C-S-g = ":sh wezterm cli split-pane -- lazygit"
-C-S-o = ":open ~/.config/helix/config.toml"
+C-g = ":sh wezterm cli split-pane -- lazygit"
+C-o = ":open ~/.config/helix/config.toml"
 C-j = "move_line_down"
 C-k = "move_line_up"
 

@@ -13,6 +13,7 @@ inherits = "sonokai"
 #  SYNTAX — Strings & Punctuation
 # ══════════════════════════════════════════════════════════════════════════════
 
+"markup.raw" = "green_dim"
 "string" = "blue_str"                # #4C88F4  ← @string / String
 "string.regexp" = "blue_str"
 "punctuation.bracket" = "bracket_fg" # #C0C0C8  ← @punctuation.bracket
@@ -123,15 +124,16 @@ black = "#181819"
 fg = "#E2E2E3"
 
 # ── Core accent colours (nvim overrides) ─────────────────────────────────────
-red = "#FF5B51"      # keywords, errors         ← nvim red override
-orange = "#FF8E5B"   # member fields, specials  ← nvim orange override
-yellow = "#F0A737"   # numbers, tags, macros    ← nvim yellow override
-green = "#9ED072"    # functions (base), ui accents (unchanged)
-blue = "#10ACCF"     # namespaces, types (base) ← nvim blue override
-purple = "#B39DF3"   # builtins, attributes     (unchanged)
-cyan = "#8DD0B6"     # edge compat              (unchanged)
+red = "#FF5B51"       # keywords, errors         ← nvim red override
+orange = "#FF8E5B"    # member fields, specials  ← nvim orange override
+yellow = "#F0A737"    # numbers, tags, macros    ← nvim yellow override
+green = "#9ED072"     # functions (base), ui accents (unchanged)
+blue = "#10ACCF"      # namespaces, types (base) ← nvim blue override
+purple = "#B39DF3"    # builtins, attributes     (unchanged)
+cyan = "#8DD0B6"      # edge compat              (unchanged)
 white = "#E1E1E4"
 grey = "#7F8490"
+green_dim = "#7d996b"
 grey_dim = "#595F6F"
 
 # ── Syntax extras ─────────────────────────────────────────────────────────────
