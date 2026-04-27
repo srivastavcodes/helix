@@ -19,13 +19,16 @@ diagnostics.styleLints.enable = true    # clippy-style lint hints
 diagnostics.experimental.enable = false # too noisy for daily use
 
 # -- Check (replaces cargo check on save) ------------------------------------------------------------------------
-# check.command    = "clippy"               # use clippy instead of plain check
-# check.extraArgs  = [
-#     "--",
-#     "-W", "clippy::pedantic",
-#     "-A", "clippy::must_use_candidate",   # too noisy
-#     "-A", "clippy::missing_errors_doc",   # too noisy
-# ]
+check.command = "clippy" # use clippy instead of plain check
+check.extraArgs = [
+    "--",
+    "-W",
+    "clippy::pedantic",
+    "-A",
+    "clippy::must_use_candidate", # too noisy
+    "-A",
+    "clippy::missing_errors_doc", # too noisy
+]
 
 # -- Inlay hints -------------------------------------------------------------------------------------------------
 inlayHints.typeHints.enable = true
