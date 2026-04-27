@@ -39,7 +39,7 @@ inherits = "sonokai"
 # ══════════════════════════════════════════════════════════════════════════════
 
 # "function"         = "fn_color"          # #FFB548  ← @lsp.type.function
-"function.method" = "fn_color"
+# "function.method"  = "fn_color"
 "function.builtin" = "fn_color"
 "function.macro" = "macro_color"    # #FFBF41  ← macros
 "attribute" = "macro_color"         # #FFBF41  ← proc-macro / derive attrs
