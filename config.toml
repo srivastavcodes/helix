@@ -33,6 +33,11 @@ skip-levels = 1
 cursor-line = "hint"
 other-lines = "warning"
 
+[editor.auto-save]
+focus-lost = true
+after-delay.enable = true
+after-delay.timeout = 10_000
+
 [editor.statusline]
 left = ["mode", "file-name", "file-modification-indicator"]
 right = [
