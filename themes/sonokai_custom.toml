@@ -149,7 +149,7 @@ type_enum_var = "#6DA1AB" # enum variants         ← @lsp.type.enumMember.rust
 
 # ── Function & macro ─────────────────────────────────────────────────────────
 fn_color = "#FFB548"    # functions             ← @lsp.type.function.rust
-macro_color = "#F0A737" # macros / directives   ← @keyword.directive.rust / yellow
+macro_color = "#6DA1AB" # macros / directives   ← @keyword.directive.rust / yellow
 
 # ── Diff colours (carried from stock sonokai) ─────────────────────────────────
 bg_red = "#FF6077"
