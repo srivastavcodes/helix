@@ -161,3 +161,14 @@ arrayIndex = "Enable" # shows index numbers in array literals
 name = "lua"
 auto-format = true
 formatter = { command = "stylua", args = ["-"] }
+
+# ================================================================================================================
+#  HTML (*.html files, *.gohtml files)
+# ================================================================================================================
+
+[[language]]
+name = "html"
+auto-format = true
+file-types = ["html", "gohtml", "htm"]
+language-servers = ["vscode-html-language-server"]
+formatter = { command = "prettier", args = ["--parser", "html"] }
