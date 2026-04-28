@@ -41,13 +41,13 @@ after-delay.timeout = 10_000
 [editor.statusline]
 left = ["mode", "file-name", "file-modification-indicator", "spinner"]
 right = [
-    "diagnostics",
-    "selections",
-    "version-control",
-    "position",
-    "file-encoding",
-    "file-line-ending",
-    "file-type",
+  "diagnostics",
+  "selections",
+  "version-control",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type",
 ]
 separator = "|"
 mode.normal = "NORMAL"
@@ -68,6 +68,8 @@ C-k = "move_line_up"
 [keys.select]
 C-j = "move_line_down"
 C-k = "move_line_up"
+"{" = "goto_prev_paragraph"
+"}" = "goto_next_paragraph"
 
 [keys.insert]
 C-j = "move_line_down"
