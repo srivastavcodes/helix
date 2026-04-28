@@ -43,8 +43,8 @@ left = [
   "mode",
   "register",
   "file-name",
-  "file-modification-indicator",
   "spinner",
+  "file-modification-indicator",
 ]
 right = [
   "diagnostics",
