@@ -144,3 +144,20 @@ soft-wrap.enable = true # wrap long lines in docs
 name = "bash"
 auto-format = false
 language-servers = ["bash-language-server"]
+
+# ================================================================================================================
+#  LUA (.lua scripts, nvim configs, WezTerm configs)
+# ================================================================================================================
+
+[language-server.lua-language-server.config.Lua.hint]
+enable = true
+setType = true        # shows type on variable assignment
+paramName = "All"     # shows parameter names on function calls
+paramType = true      # shows parameter types
+await = true          # shows await hints on async calls
+arrayIndex = "Enable" # shows index numbers in array literals
+
+[[language]]
+name = "lua"
+auto-format = true
+formatter = { command = "stylua", args = ["-"] }

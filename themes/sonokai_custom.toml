@@ -133,7 +133,7 @@ purple = "#B39DF3"    # builtins, attributes     (unchanged)
 cyan = "#8DD0B6"      # edge compat              (unchanged)
 white = "#E1E1E4"
 grey = "#7F8490"
-green_dim = "#7d996b"
+green_dim = "#4986B4"
 grey_dim = "#595F6F"
 
 # ── Syntax extras ─────────────────────────────────────────────────────────────
