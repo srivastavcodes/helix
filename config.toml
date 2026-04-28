@@ -47,7 +47,6 @@ left = [
   "file-modification-indicator",
 ]
 right = [
-  "diagnostics",
   "version-control",
   "selections",
   "position",
@@ -55,6 +54,7 @@ right = [
   "file-line-ending",
   "total-line-numbers",
   "file-type",
+  "diagnostics",
 ]
 separator = "|"
 mode.normal = "NORMAL"
