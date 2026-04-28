@@ -41,9 +41,9 @@ after-delay.timeout = 10_000
 [editor.statusline]
 left = [
   "mode",
+  "register",
   "file-name",
   "file-modification-indicator",
-  "register",
   "spinner",
 ]
 right = [
@@ -71,12 +71,16 @@ C-j = "move_line_down"
 C-k = "move_line_up"
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
+"A-." = "collapse_selection"
+";" = "repeat_last_motion"
 
 [keys.select]
 C-j = "move_line_down"
 C-k = "move_line_up"
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
+"A-." = "collapse_selection"
+";" = "repeat_last_motion"
 
 [keys.insert]
 C-j = "move_line_down"
