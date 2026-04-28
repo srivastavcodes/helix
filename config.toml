@@ -39,14 +39,21 @@ after-delay.enable = true
 after-delay.timeout = 10_000
 
 [editor.statusline]
-left = ["mode", "file-name", "file-modification-indicator", "spinner"]
+left = [
+  "mode",
+  "file-name",
+  "file-modification-indicator",
+  "register",
+  "spinner",
+]
 right = [
   "diagnostics",
-  "selections",
   "version-control",
+  "selections",
   "position",
   "file-encoding",
   "file-line-ending",
+  "total-line-numbers",
   "file-type",
 ]
 separator = "|"
