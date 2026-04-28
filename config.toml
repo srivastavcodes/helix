@@ -67,20 +67,14 @@ workspace-diagnostics = ["warning", "error"]
 [keys.normal]
 C-l = ":sh wezterm cli split-pane --percent 70 -- lazygit > /dev/null 2>&1"
 C-o = ":open ~/.config/helix/config.toml"
-C-j = "move_line_down"
-C-k = "move_line_up"
+C-k = "repeat_last_motion"
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
-"A-." = "collapse_selection"
-";" = "repeat_last_motion"
 
 [keys.select]
-C-j = "move_line_down"
-C-k = "move_line_up"
+C-k = "repeat_last_motion"
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
-"A-." = "collapse_selection"
-";" = "repeat_last_motion"
 
 [keys.insert]
 C-j = "move_line_down"
