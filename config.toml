@@ -34,7 +34,7 @@ cursor-line = "hint"
 # other-lines = "warning"
 
 [editor.auto-save]
-focus-lost = true
+focus-lost = false
 after-delay.enable = true
 after-delay.timeout = 10_000
 
