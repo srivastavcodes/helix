@@ -70,6 +70,8 @@ C-o = ":open ~/.config/helix/config.toml"
 C-k = "repeat_last_motion"
 "{" = "goto_prev_paragraph"
 "}" = "goto_next_paragraph"
+"H" = "goto_previous_buffer"
+"L" = "goto_next_buffer"
 
 [keys.select]
 C-k = "repeat_last_motion"
