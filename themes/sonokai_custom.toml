@@ -51,37 +51,59 @@ inherits = "sonokai"
 # ══════════════════════════════════════════════════════════════════════════════
 
 "ui.cursor" = { modifiers = ["reversed"] }
-"ui.cursor.primary" = { fg = "bg0", bg = "green" } # green cursor
-"ui.cursor.insert" = { fg = "bg0", bg = "grey" }
-"ui.cursor.select" = { fg = "bg0", bg = "blue" }
-"ui.cursor.match" = { bg = "bg4" }
 
-"ui.cursorline.primary" = { bg = "bg1" }
+"ui.cursor.primary.normal" = { fg = "bg0", bg = "green" }  # green cursor
+"ui.cursor.primary.insert" = { fg = "bg0", bg = "red" }
+"ui.cursor.primary.select" = { fg = "bg0", bg = "purple" }
+
+"ui.cursor.normal" = { fg = "bg0", bg = "green" }
+"ui.cursor.insert" = { fg = "bg0", bg = "red" }
+"ui.cursor.select" = { fg = "bg0", bg = "purple" }
+
+"ui.cursor.match" = { bg = "match" }
+
+"ui.cursorline.primary" = { bg = "caret_row" }
 
 # ══════════════════════════════════════════════════════════════════════════════
-#  UI — Selection
+#  UI — Selection/Highlight
 # ══════════════════════════════════════════════════════════════════════════════
 
-"ui.selection" = { bg = "bg5" }
-"ui.selection.primary" = { bg = "bg4" }
+"ui.selection" = { bg = "select" }
+"ui.selection.primary" = { bg = "select" }
+"ui.highlight" = { bg = "picker" }
+"ui.highlight.frameline" = { bg = "picker" }
 
 # ══════════════════════════════════════════════════════════════════════════════
-#  UI — Menus & Completion
+#  UI — Menus & Completion (popups)
 #  sonokai_menu_selection_background = "green"
 # ══════════════════════════════════════════════════════════════════════════════
 
-"ui.menu" = { fg = "fg", bg = "bg2" }
+"ui.menu" = { fg = "fg", bg = "bg1" }
 "ui.menu.selected" = { fg = "bg0", bg = "green" } # green selection
+
 "ui.text.focus" = "green"
+
+"ui.help" = { fg = "purple", bg = "bg0" }
+"ui.popup" = { fg = "white", bg = "bg1" }
+"ui.popup.info" = { fg = "purple", bg = "bg1" }
+"ui.background" = { fg = "purple", bg = "bg0" }
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  UI — Bufferline (mode colours mirror nvim sonokai defaults)
+# ══════════════════════════════════════════════════════════════════════════════
+
+"ui.bufferline" = { fg = "white_dim", bg = "bg_dim" }
+"ui.bufferline.active" = { fg = "white", bg = "bg0" }
+"ui.bufferline.background" = { fg = "white", bg = "black" }
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  UI — Statusline (mode colours mirror nvim sonokai defaults)
 # ══════════════════════════════════════════════════════════════════════════════
 
-"ui.statusline" = { fg = "fg", bg = "bg3" }
+"ui.statusline" = { fg = "fg", bg = "bg1" }
 "ui.statusline.inactive" = { fg = "grey", bg = "bg1" }
 "ui.statusline.normal" = { fg = "bg0", bg = "green", modifiers = ["bold"] }
-"ui.statusline.insert" = { fg = "bg0", bg = "green", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "bg0", bg = "red", modifiers = ["bold"] }
 "ui.statusline.select" = { fg = "bg0", bg = "purple", modifiers = ["bold"] }
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -132,6 +154,7 @@ blue = "#10ACCF"      # namespaces, types (base) ← nvim blue override
 purple = "#B39DF3"    # builtins, attributes     (unchanged)
 cyan = "#8DD0B6"      # edge compat              (unchanged)
 white = "#E1E1E4"
+white_dim = "#999999"
 grey = "#7F8490"
 green_dim = "#4986B4"
 grey_dim = "#595F6F"
@@ -159,3 +182,9 @@ diff_red = "#55393D"
 diff_green = "#394634"
 diff_blue = "#354157"
 diff_yellow = "#4E432F"
+
+# -- JetBrains -------------------------------------------------------------------------------------------------
+picker = "#2C364F"
+select = "#26373B"
+caret_row = "#26282E"
+match = "#414f57"

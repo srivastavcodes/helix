@@ -7,9 +7,10 @@ cursorline = true
 clipboard-provider = "pasteboard"
 scrolloff = 10
 completion-trigger-len = 1
-completion-replace = true
+completion-replace = false
 bufferline = "multiple"
 popup-border = "all"
+color-modes = true
 
 [editor.lsp]
 auto-signature-help = false
@@ -17,8 +18,8 @@ display-inlay-hints = true
 display-progress-messages = true
 
 [editor.cursor-shape]
-insert = "bar"
 normal = "block"
+insert = "bar"
 select = "underline"
 
 [editor.file-picker]
