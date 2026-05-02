@@ -96,9 +96,6 @@ language-servers = ["gopls", "golangci-lint-lsp"]
 #  taplo = full-featured TOML LSP with schema support for Cargo.toml
 # ================================================================================================================
 
-[language-server.taplo.config]
-formatter.enabled = true
-
 [[language]]
 name = "toml"
 auto-format = true

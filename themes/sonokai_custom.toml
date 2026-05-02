@@ -33,6 +33,7 @@ inherits = "sonokai"
 "variable.builtin" = "red"            # #FF5B51  ← builtin variables (self)
 "special" = "yellow"
 # "variable.other.member" = "white"
+"label" = "yellow"
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  SYNTAX — Functions & Keywords
@@ -185,6 +186,6 @@ diff_yellow = "#4E432F"
 
 # -- JetBrains -------------------------------------------------------------------------------------------------
 picker = "#2C364F"
-select = "#26373B"
+select = "#32383D"
 caret_row = "#26282E"
 match = "#414f57"
