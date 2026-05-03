@@ -14,9 +14,9 @@ inherits = "sonokai"
 # ══════════════════════════════════════════════════════════════════════════════
 
 "markup.raw" = "green_dim"
-"string" = "blue_str"                # #4C88F4  ← @string / String
+"string" = "blue_str"  # #4C88F4  ← @string / String
 "string.regexp" = "blue_str"
-"punctuation.bracket" = "bracket_fg" # #C0C0C8  ← @punctuation.bracket
+"punctuation.bracket" = "bracket_fg"  # #C0C0C8  ← @punctuation.bracket
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  SYNTAX — Types
@@ -24,13 +24,13 @@ inherits = "sonokai"
 #  the LSP semantic tokens you set per-language in nvim.
 # ══════════════════════════════════════════════════════════════════════════════
 
-"type" = "type_struct"                # #40BB99  ← @type / @lsp.type.struct
+"type" = "type_struct"  # #40BB99  ← @type / @lsp.type.struct
 "type.parameter" = "type_struct"
 "constructor" = "type_enum"
-"type.enum" = "type_enum"             # #788CDA  ← @lsp.type.enum
-"type.enum.variant" = "type_enum_var" # #6DA1AB  ← @lsp.type.enumMember
-"namespace" = "blue"                  # #10ACCF  ← modules / namespaces
-"variable.builtin" = "red"            # #FF5B51  ← builtin variables (self)
+"type.enum" = "type_enum"  # #788CDA  ← @lsp.type.enum
+"type.enum.variant" = "type_enum_var"  # #6DA1AB  ← @lsp.type.enumMember
+"namespace" = "blue"  # #10ACCF  ← modules / namespaces
+"variable.builtin" = "purple"  # #FF5B51  ← builtin variables (self)
 "special" = "yellow"
 # "variable.other.member" = "white"
 "label" = "yellow"
@@ -42,9 +42,9 @@ inherits = "sonokai"
 # "function"         = "fn_color"          # #FFB548  ← @lsp.type.function
 # "function.method"  = "fn_color"
 "function.builtin" = "fn_color"
-"function.macro" = "macro_color"    # #FFBF41  ← macros
-"attribute" = "macro_color"         # #FFBF41  ← proc-macro / derive attrs
-"keyword.directive" = "macro_color" # #FFBF41  ← @keyword.directive (Rust #[…])
+"function.macro" = "macro_color"  # #FFBF41  ← macros
+"attribute" = "macro_color"  # #FFBF41  ← proc-macro / derive attrs
+"keyword.directive" = "macro_color"  # #FFBF41  ← @keyword.directive (Rust #[…])
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  UI — Cursor
@@ -80,7 +80,7 @@ inherits = "sonokai"
 # ══════════════════════════════════════════════════════════════════════════════
 
 "ui.menu" = { fg = "fg", bg = "bg1" }
-"ui.menu.selected" = { fg = "bg0", bg = "green" } # green selection
+"ui.menu.selected" = { fg = "bg0", bg = "green" }  # green selection
 
 "ui.text.focus" = "green"
 
@@ -132,28 +132,28 @@ hint = { fg = "blue", bg = "bg2", modifiers = ["bold"] }
 # ══════════════════════════════════════════════════════════════════════════════
 
 [palette]
-
 # ── Backgrounds ───────────────────────────────────────────────────────────────
-bg_dim = "#1a1c1f" # dim bg
-bg0 = "#222427"    # main bg  (nvim: bg0 override — darker than stock #2c2e34)
-bg1 = "#292B30"    # cursorline, inactive statusline bg
-bg2 = "#2D3038"    # popup bg
-bg3 = "#32353D"    # statusline bg
-bg4 = "#383C45"    # cursor match, secondary selection
-bg5 = "#3C4049"    # primary selection
+bg_dim = "#1a1c1f"  # dim bg
+bg0 = "#222427"  # main bg  (nvim: bg0 override — darker than stock #2c2e34)
+bg1 = "#292B30"  # cursorline, inactive statusline bg
+bg2 = "#2D3038"  # popup bg
+bg3 = "#32353D"  # statusline bg
+bg4 = "#383C45"  # cursor match, secondary selection
+bg5 = "#3C4049"  # primary selection
 black = "#181819"
 
 # ── Foreground ────────────────────────────────────────────────────────────────
 fg = "#E2E2E3"
 
 # ── Core accent colours (nvim overrides) ─────────────────────────────────────
-red = "#FF5B51"       # keywords, errors         ← nvim red override
-orange = "#FF8E5B"    # member fields, specials  ← nvim orange override
-yellow = "#F0A737"    # numbers, tags, macros    ← nvim yellow override
-green = "#9ED072"     # functions (base), ui accents (unchanged)
-blue = "#10ACCF"      # namespaces, types (base) ← nvim blue override
-purple = "#B39DF3"    # builtins, attributes     (unchanged)
-cyan = "#8DD0B6"      # edge compat              (unchanged)
+red = "#FF5B51"  # keywords, errors         ← nvim red override
+orange = "#FF8E5B"  # member fields, specials  ← nvim orange override
+yellow = "#F0A737"  # numbers, tags, macros    ← nvim yellow override
+yellow_pale = "#FFBB54"
+green = "#9ED072"  # functions (base), ui accents (unchanged)
+blue = "#10ACCF"  # namespaces, types (base) ← nvim blue override
+purple = "#B39DF3"  # builtins, attributes     (unchanged)
+cyan = "#8DD0B6"  # edge compat              (unchanged)
 white = "#E1E1E4"
 white_dim = "#999999"
 grey = "#7F8490"
@@ -161,19 +161,19 @@ green_dim = "#4986B4"
 grey_dim = "#595F6F"
 
 # ── Syntax extras ─────────────────────────────────────────────────────────────
-blue_str = "#4C88F4"   # strings               ← @string / String
-bracket_fg = "#C0C0C8" # punctuation.bracket   ← @punctuation.bracket
+blue_str = "#4C88F4"  # strings               ← @string / String
+bracket_fg = "#C0C0C8"  # punctuation.bracket   ← @punctuation.bracket
 
 # ── Type hierarchy ────────────────────────────────────────────────────────────
-type_struct = "#40BB99"   # structs / concrete    ← @type.rust / @lsp.type.struct.rust
-type_enum = "#788CDA"     # enum types            ← @lsp.type.enum.rust
-type_enum_var = "#6DA1AB" # enum variants         ← @lsp.type.enumMember.rust
-# trait/interface (#8A8FF4) has no dedicated Helix scope; closest is "namespace"
+type_struct = "#40BB99"  # structs / concrete    ← @type.rust / @lsp.type.struct.rust
+type_enum = "#788CDA"  # enum types            ← @lsp.type.enum.rust
+type_enum_var = "#6DA1AB"  # enum variants         ← @lsp.type.enumMember.rust
+type_trait = "#8A8FF4"  # has no dedicated Helix scope; closest is "namespace"
 # or use a future "type.interface" if added upstream.
 
 # ── Function & macro ─────────────────────────────────────────────────────────
-fn_color = "#FFB548"    # functions             ← @lsp.type.function.rust
-macro_color = "#6DA1AB" # macros / directives   ← @keyword.directive.rust / yellow
+fn_color = "#FFB548"  # functions             ← @lsp.type.function.rust
+macro_color = "#6DA1AB"  # macros / directives   ← @keyword.directive.rust / yellow
 
 # ── Diff colours (carried from stock sonokai) ─────────────────────────────────
 bg_red = "#FF6077"

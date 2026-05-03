@@ -1,13 +1,8 @@
-# ================================================================================================================
-#  RUST
-# ================================================================================================================
-
 [language-server.rust-analyzer.config]
-
 # -- Cargo -------------------------------------------------------------------------------------------------------
-cargo.buildScripts.enable = true # needed for proc-macros and build.rs
-cargo.features = "all"           # index all features upfront
-cargo.allTargets = true          # include tests/benches in analysis
+cargo.buildScripts.enable = true  # needed for proc-macros and build.rs
+cargo.features = "all"  # index all features upfront
+cargo.allTargets = true  # include tests/benches in analysis
 
 # -- Proc macros -------------------------------------------------------------------------------------------------
 procMacro.enable = true
@@ -15,11 +10,11 @@ procMacro.attributes.enable = true
 
 # -- Diagnostics -------------------------------------------------------------------------------------------------
 diagnostics.enable = true
-diagnostics.styleLints.enable = true    # clippy-style lint hints
-diagnostics.experimental.enable = false # too noisy for daily use
+diagnostics.styleLints.enable = true  # clippy-style lint hints
+diagnostics.experimental.enable = false  # too noisy for daily use
 
 # -- Check (replaces cargo check on save) ------------------------------------------------------------------------
-check.command = "clippy" # use clippy instead of plain check
+check.command = "clippy"  # use clippy instead of plain check
 # check.extraArgs = [
 #   "--",
 #   "-A",
@@ -39,31 +34,21 @@ inlayHints.lifetimeElisionHints.enable = "skip_trivial"
 inlayHints.lifetimeElisionHints.useParameterNames = true
 inlayHints.discriminantHints.enable = "fieldless"
 inlayHints.closingBraceHints.enable = true
-inlayHints.bindingModeHints.enable = false               # noisy, keep off
 inlayHints.closingBraceHints.minLines = 15
+inlayHints.bindingModeHints.enable = false  # noisy, keep off
 
 # -- Completion --------------------------------------------------------------------------------------------------
 completion.autoimport.enable = true
 completion.callable.enable = "fill_arguments"
-completion.postfix.enable = true                # .if / .match / .unwrap completions
+completion.postfix.enable = true  # .if / .match / .unwrap completions
 completion.fullFunctionSignatures.enable = true
 
 # -- Imports -----------------------------------------------------------------------------------------------------
-imports.granularity.group = "module" # group imports by module
-imports.prefix = "self"              # prefer self:: over crate::
+imports.granularity.group = "module"  # group imports by module
+imports.prefix = "self"  # prefer self:: over crate::
 
 # -- Files -------------------------------------------------------------------------------------------------------
 files.excludeDirs = ["target", ".git", "node_modules"]
-
-[[language]]
-name = "rust"
-auto-format = true
-formatter = { command = "rustfmt" }
-language-servers = ["rust-analyzer"]
-
-# ================================================================================================================
-#  GO
-# ================================================================================================================
 
 [language-server.gopls.config.hints]
 assignVariableTypes = true
@@ -72,6 +57,9 @@ constantValues = true
 functionTypeParameters = true
 parameterNames = true
 rangeVariableTypes = true
+
+[language-server.golangci-lint-lsp]
+command = "golangci-lint-langserver"
 
 [language-server.golangci-lint-lsp.config]
 command = [
@@ -82,8 +70,27 @@ command = [
   "--issues-exit-code=1",
 ]
 
-[language-server.golangci-lint-lsp]
-command = "golangci-lint-langserver"
+[language-server.lua-language-server.config.Lua.hint]
+enable = true
+setType = true  # shows type on variable assignment
+paramName = "All"  # shows parameter names on function calls
+paramType = true  # shows parameter types
+await = true  # shows await hints on async calls
+arrayIndex = "Enable"  # shows index numbers in array literals
+
+# ================================================================================================================
+#  RUST
+# ================================================================================================================
+
+[[language]]
+name = "rust"
+auto-format = true
+formatter = { command = "rustfmt" }
+language-servers = ["rust-analyzer"]
+
+# ================================================================================================================
+#  GO
+# ================================================================================================================
 
 [[language]]
 name = "go"
@@ -99,9 +106,7 @@ language-servers = ["gopls", "golangci-lint-lsp"]
 [[language]]
 name = "toml"
 auto-format = true
-language-servers = ["taplo"]                           # drop tombi (taplo is more mature for Cargo)
-indent = { tab-width = 4, unit = "    " }              # Cargo.toml convention
-formatter = { command = "taplo", args = ["fmt", "-"] }
+language-servers = ["tombi"]
 
 # ================================================================================================================
 #  JSON  (api responses, configs, .vscode/settings.json)
@@ -118,7 +123,7 @@ indent = { tab-width = 4, unit = "    " }
 
 [[language]]
 name = "yaml"
-auto-format = false                         # yamlfmt can be destructive, keep manual
+auto-format = false  # yamlfmt can be destructive, keep manual
 language-servers = ["yaml-language-server"]
 
 # ================================================================================================================
@@ -129,8 +134,8 @@ language-servers = ["yaml-language-server"]
 name = "markdown"
 language-servers = [
   "marksman",
-] # drop markdown-oxide and rumdl, overkill for Rust docs
-soft-wrap.enable = true # wrap long lines in docs
+]  # drop markdown-oxide and rumdl, overkill for Rust docs
+soft-wrap.enable = true  # wrap long lines in docs
 
 # ================================================================================================================
 #  BASH  (.env scripts, Makefiles, CI shell scripts)
@@ -144,14 +149,6 @@ language-servers = ["bash-language-server"]
 # ================================================================================================================
 #  LUA (.lua scripts, nvim configs, WezTerm configs)
 # ================================================================================================================
-
-[language-server.lua-language-server.config.Lua.hint]
-enable = true
-setType = true        # shows type on variable assignment
-paramName = "All"     # shows parameter names on function calls
-paramType = true      # shows parameter types
-await = true          # shows await hints on async calls
-arrayIndex = "Enable" # shows index numbers in array literals
 
 [[language]]
 name = "lua"
